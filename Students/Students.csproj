@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -181,6 +182,14 @@
     <Compile Include="Migrations\202105170436171_InitializeGenderData.Designer.cs">
       <DependentUpon>202105170436171_InitializeGenderData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105170809360_InitialUpdate.cs" />
+    <Compile Include="Migrations\202105170809360_InitialUpdate.Designer.cs">
+      <DependentUpon>202105170809360_InitialUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105170843258_UpdateStudentTable.cs" />
+    <Compile Include="Migrations\202105170843258_UpdateStudentTable.Designer.cs">
+      <DependentUpon>202105170843258_UpdateStudentTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Gender.cs" />
@@ -189,6 +198,7 @@
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\StudentFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -246,10 +256,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Students\List.cshtml" />
+    <Content Include="Views\Students\StudentForm.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -270,6 +283,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105170436171_InitializeGenderData.resx">
       <DependentUpon>202105170436171_InitializeGenderData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105170809360_InitialUpdate.resx">
+      <DependentUpon>202105170809360_InitialUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105170843258_UpdateStudentTable.resx">
+      <DependentUpon>202105170843258_UpdateStudentTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
