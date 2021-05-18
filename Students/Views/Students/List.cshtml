@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Students.Models.Student>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+@Html.ActionLink("New", "New", null, new {@class ="btn btn-primary" })
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.FirstName)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.LastName)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.GenderId)</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+        <tr>
+            <th scope="row">
+                @Html.ActionLink(student.Id.ToString(), "Details", new { id = student.Id })
+            </th>
+            <td>@student.FirstName</td>
+            <td>@student.LastName</td>
+            <td>@student.Gender.Name</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = student.Id }, new { @class = "btn btn-warning" })
+                @Html.ActionLink("Delete", "Delete", new { id = student.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
